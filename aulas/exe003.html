@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula Inicial de Javascript</title>
+    <!-- Estilo da Página -->
+    <style>
+      body {
+        background-color: aquamarine;
+        color: white;
+        font: normal 20px Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá, mundo!</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde sed ipsa
+      quasi delectus voluptatibus alias deserunt doloremque nisi, reiciendis
+      tenetur consequatur iste quas ad nesciunt impedit, minus laudantium velit
+      dolorem.
+    </p>
+
+    <!-- Scripts em Javascript da página -->
+    <script>
+      /* var nome = window.prompt("Qual seu nome?");
+        var dtnascimento = window.prompt("Qual sua data de nascimento (dia/mes/ano)?");
+        var sexo = window.prompt("Qual seu sexo?");
+        var idade = dtnascimento.split("/");
+        window.alert("Olá, " + nome + "! Você tem " + (2022 - idade[2]) + " anos.");
+
+        document.write("Olá, " + nome + "! Você tem " + (2022 - idade[2]) + " anos.");
+        document.write("<br>");
+        document.write(`Olá, ${nome}. Você tem ${(2022 - idade[2])} anos.`);
+        */
+
+      var nome = window.prompt('Qual seu nome?');
+      document.write(
+        `Olá, ${nome}! Seu nome tem ${
+          nome.length
+        } letras. Em maisculo, é ${nome.toUpperCase()}. Em minuscule, é ${nome.toLowerCase()}.`
+      );
+      document.write('<br>');
+      var texto = 1545.567;
+      texto.toFixed(2).replace('.', ',');
+
+      document.write(
+        `O valor de texto é ${texto.toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        })}`
+      );
+    </script>
+  </body>
+</html>
