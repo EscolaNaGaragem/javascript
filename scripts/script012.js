@@ -12,15 +12,17 @@ function adicionar() {
   } else {
     if (incluirnoVetor(n)) {
       var opcao = document.createElement('option');
-      opcao.value = n;
-      opcao.id=n;
-      opcao.innerHTML = `O valor ${n} foi adicionado ao vetor`;
+      /* opcao.value = n;
+      opcao.id=n;*/
+
+      opcao.innerHTML = ` ${n} foi adicionado`;
       selecao.appendChild(opcao);
       exibir();
     } else {
       saida.innerHTML = `<p>Número já existe no vetor!</p> <br>`;
     }
   }
+  document.getElementById('num').value = '';
 }
 
 function incluirnoVetor(i) {
