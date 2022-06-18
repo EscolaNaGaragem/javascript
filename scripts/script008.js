@@ -6,24 +6,26 @@ function calcular(){
   if (valor1 == "" || valor2 == "" || valor3 == "") {
     resultado.innerHTML = "Impossível calcular";
   } else {  
-    var i = Number(valor1);
-    var f = Number(valor2);
-    var p = Number(valor3);
-    if (i < f) {
-      var r = "";
-      while (i <= f) {
-        r += i + " ";
-        i += p;
+    var r = "", i = Number(valor1), f = Number(valor2), p = Number(valor3); 
+
+    if ((i<=f && p>0)) {
+      for (var c = i; c <= f; c += p) {
+        r += c + '👈 ';
       }
-      resultado.innerHTML = r;
-    } else {  
-      var r = "";
-      while (i >= f) {
-        r += i + " ";
-        i -= p;
+    } else if ((i<=f && p<0)) {
+      for (var c = f; c >= i; c += p) {
+        r += c + '👈 ';
       }
-      resultado.innerHTML = r;
-    }
+    }else if(i>f && p>0) {
+      for (var c = f; c <= i; c += p) {
+        r += c + '👈 ';
+       }
+     } else if(i>f && p<0) {
+      for (var c = i; c >= f; c += p) {
+        r += c + '👈 ';
+       }
+     }
+    resultado.innerHTML = r + '🚩';
   }
 }
 
